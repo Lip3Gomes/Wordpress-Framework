@@ -1,0 +1,53 @@
+#loadingModal {
+    background-color:  $corBranca;
+    .modal-content{
+        background: $corBranca !important;
+        border: none !important;
+        .flex-fix {
+            .flex-parent {
+                display: flex;
+                flex-direction: row;
+        
+                .flex-child {
+                    padding: 1em;                    
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+        
+                    .loading-spinner {
+                        border-radius: 50%;
+                        width: 180px;
+                        height: 180px;
+                        border: 2px solid  $corPrimaria + 88;
+                        border-top-color: $corPrimaria;
+                        -webkit-animation: rotation .8s infinite cubic-bezier(.6, .3, .3, .6);
+                        animation: rotation .8s infinite cubic-bezier(.6, .3, .3, .6);
+                    }
+        
+                    .loading-logo {                       
+                        position: absolute;                        
+                        margin: auto;
+                        text-align: center;
+                        img{
+                            width: 100px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

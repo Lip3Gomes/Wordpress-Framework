@@ -1,0 +1,18 @@
+ul {
+    &.pagination {
+        li {
+            &.page-item{
+                .page-link{
+                    color:$corPrimaria;
+                }
+                &.active {
+                    .page-link{
+                        background-color: $corPrimaria;
+                        border-color: $corPrimaria;
+                        color:$corBranca;
+                    }
+                }
+            }
+        }
+    }
+}
