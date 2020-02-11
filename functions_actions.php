@@ -18,7 +18,7 @@ function admin_bar_item(WP_Admin_Bar $admin_bar)
 
   $args = array(
     'id' => 'cia_menu',
-    'title' => __('<span class="logo"> <img  src="' . get_template_directory_uri().'/core/assets/img/criacao-de-sites.png"></span>'),
+    'title' => __('<span class="cia-logo"> <img  src="' . get_template_directory_uri().'/core/assets/img/criacao-de-sites.png"></span>'),
     'href' => 'http://www.ciawebsites.com.br'
   );
   $admin_bar->add_node($args);
@@ -109,11 +109,6 @@ function cia_admin_register(){
 add_action('admin_enqueue_scripts', 'cia_admin_register');
 
 //CSS Login
-function my_login_stylesheet()
-{
-    wp_enqueue_style('custom-login', get_template_directory_uri().'/core/assets/css/style_login.css');
-}
-add_action('login_enqueue_scripts', 'my_login_stylesheet');
 
 
 

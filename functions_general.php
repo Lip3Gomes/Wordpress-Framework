@@ -15,7 +15,6 @@ if (function_exists('acf_add_options_page')) {
 
 function pbo_settings_theme()
 {
-
   register_nav_menus(array(
     'primary' => __('Cabeçalho', 'CiaWebsites'),
     'secondary' => __('Footer', 'CiaWebsites'),
@@ -23,20 +22,13 @@ function pbo_settings_theme()
 }
 add_action('init', 'pbo_settings_theme');
 
-include get_template_directory() . '/core/functions/pagination-bootstrap.php';
-
-# Funcoes do PBO Framework
-require_once(get_template_directory() . '/functions/slide.php');
-require_once(get_template_directory() . '/functions/produtos.php');
-require_once(get_template_directory() . '/functions/conceitos.php');
-require_once(get_template_directory() . '/functions/clientes.php');
-require_once(get_template_directory() . '/functions/paginacao.php');
-
 // Enable post thumbnails
 add_theme_support('post-thumbnails');
 
 // Custom image sizes
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'logo', 250, 400, true );
-
+  add_image_size( 'logo', 250, 400, true );
+  
 }
+
+include get_template_directory() . '/core/functions/pagination-bootstrap.php';
